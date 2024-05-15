@@ -48,7 +48,7 @@ jobs:
           gitfolder=$(find -type f -name PKGBUILD | sed 's/PKGBUILD//')
           cd $gitfolder
           if [ "" ]; then
-            sed "/makedepends=/s/)/ \'python-build\' \'python-wheel\')/" PKGBUILD
+            sed "/makedepends=/s/)/ \'python-build\' \'python-wheel\' \'python-installer\')/" PKGBUILD
           fi
 
       - name: Update github
